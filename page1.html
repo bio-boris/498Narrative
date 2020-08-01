@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Boris">
-  <title>The nobel prize has been awarded to 950 laureates over 597 awards, from 1901 to 2020.</title>
+  <title>The nobel prize is a prize that</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer/">
+
+
+  <link rel="stylesheet" type="text/css" href="css/pie.css">
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -36,68 +39,80 @@
   <link href="sticky-footer.css" rel="stylesheet">
 </head>
 <style>
-
   svg {
     font: 10px sans-serif;
   }
-  
-  
+
+
   .bar {
     fill: steelblue;
     clip-path: url(#clip);
   }
-    
-  .subBar { 
+
+  .subBar {
     fill: gray;
     opacity: 0.5;
   }
-  
+
   .axis path,
   .axis line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
   }
-  
+
   .brush .extent {
     stroke: #fff;
     fill: steelblue;
     fill-opacity: .25;
     shape-rendering: crispEdges;
   }
-  
-    rect.mover {
-              stroke: red;
-              stroke-opacity: .1;
-              fill: lightSteelBlue;
-              fill-opacity: .5;
-          }
-  </style>
-  
+
+  rect.mover {
+    stroke: red;
+    stroke-opacity: .1;
+    fill: lightSteelBlue;
+    fill-opacity: .5;
+  }
+</style>
+
 <body class="d-flex flex-column h-100">
   <!-- Begin page content -->
 
   <div class="container">
-    <h2 class="mt-5">From 1901 to 2019, </h2>
-    <h1>The Nobel Prizes and the Prize in Economic Sciences has been awarded
-      <strong>597</strong> times to <strong>950</strong> laureates across <strong>81</strong> countries.
+    <h2 class="mt-5"></h2>
+    <h2>Between 1901 and 2019, Nobel Prizes have been awarded 
+      <h2><strong>597</strong> times</h2>
+      <h2>across <strong>6</strong> categories  </h2>
+      <h2> to <strong>950</strong> laureates </h2>
+        <h2> from <strong>81</strong> countries</h2>
+    
+    <!-- <p class="lead"> </p>
+    <h1>The Nobel Prize, has annually bestowed anually since 1901 </h1>
+    <strong>6</strong> categories in recognition of academic, cultural, or scientific advances.
     </h1>
-    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
-    <p>Use <a href="/docs/4.5/examples/sticky-footer-navbar/">the sticky footer with a fixed navbar</a> if need be, too.
-    </p>
-  </div>
-  <div class='container'>
-    <svg id='nobel_prizes_by_year'></svg>
+   -->
+
+    <div id='dataviz'>
+      <svg id='nobel_prizes_by_year'></svg>
+    </div>
+
+    <div id="tooltip" class="hidden">
+      <p><strong><span id="category">Important Label Heading</span></strong></p>
+      <p><span id="value">100</span>%</p>
+    </div>
   </div>
 
-
-  <footer class="footer mt-auto py-3">
+  <footer class="footer mt-auto py-3 text-center">
     <div class="container">
-      <span class="text-muted">Place sticky footer content here.</span>
+      <span class="text-muted">The nobel prize categories include econ, medicine, literature, science, and peace</span>
     </div>
   </footer>
 </body>
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="main.js"></script>
+<!-- Color scale -->
+
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> -->
+<script src="page1.js"></script>
 
 </html>
