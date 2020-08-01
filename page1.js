@@ -2,13 +2,27 @@
 // https://www.d3-graph-gallery.com/graph/pie_annotation.html
 // https://www.nobelprize.org/prizes/facts/nobel-prize-facts/
 
+// TODO make a KEY and color scheme
+
+
 // set the dimensions and margins of the graph
-var width = 550
-    height = 450
+var width = 500
+    height = 400
     margin = 50
 
 // The radius of the pieplot is half the width or half the height (smallest one). I subtract a bit of margin.
 var radius = Math.min(width, height) / 2 - margin
+var data = {
+    chemistry: 111,
+    econ: 51,
+    literature: 112,
+    medicine: 110,
+    peace: 100,
+    physics: 113,
+};
+var data_sum = 111 + 51 + 112 + 110 + 100 + 113 ;
+
+
 
 // append the svg object to the div called 'my_dataviz'
 var svg = d3.select("#dataviz")
@@ -19,32 +33,12 @@ var g =  svg.append("g")
 
 
 
-var data = {
-    chemistry: 113,
-    economics: 111,
-    literature: 110,
-    medicine: 112,
-    peace: 100,
-    physics: 51,
-};
-var data_sum = 113 + 111 + 110 + 112 + 100 + 51;
-
-var laureates = {
-    chemistry: 175,
-    economics: 78,
-    literature: 113,
-    medicine: 211,
-    peace: 130,
-    physics: 204,
-};
-var laureate_sum = 175 + 78 + 113 + 211 + 130 + 204;
-
 
 
 // set the color scale
 var color = d3.scaleOrdinal()
   .domain(data)
-  .range(d3.schemeSet2);
+  .range(d3.schemeSet1);
 
 // Compute the position of each group on the pie:
 var pie = d3.pie()
@@ -80,19 +74,13 @@ g.selectAll('slices')
   
 svg.append("text")
     .attr("x", (width / 2))             
-    .attr("y", 15)
+    .attr("y", 25)
     .attr("text-anchor", "middle")  
     .style("font-size", "16px") 
     .style("text-decoration", "underline")  
     .text("Hover to see percentages for each prize");
 
-svg.append("text")
-    .attr("x", width - 10)             
-    .attr("y", 15)
-    .attr("text-anchor", "middle")  
-    .style("font-size", "16px") 
-    .style("text-decoration", "underline")  
-    .text("Hover to see percentages for each prize");
+
 
 
 	//add  tooltip to paths
@@ -104,13 +92,13 @@ var tooltip = d3.select("#dataviz").append("div").attr("class","tooltip");
 console.log(svg);
 var arcs = g.selectAll("path")
 arcs.on("mouseover", function (d) {
-    tooltip = d3.select("#tooltip");
+    tooltip = d3.select("#tooltip2");
         tooltip
         .style("left", d3.event.pageX + "px")
         .style("top", d3.event.pageY + "px")
         .style("opacity", 1)
         .select("#value")
-        .text(Math.floor(d.value / 911 * 100))
+        .text(Math.floor(d.value / data_sum * 100))
     console.log(d.data.key)
     tooltip.select("#category").text(d.data.key);
 

@@ -2,14 +2,15 @@
 <html lang="en" class="h-100">
 
 <head>
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Boris">
   <title>The nobel prize is a prize that</title>
-
+<script src="https://kit.fontawesome.com/3aa3724286.js" crossorigin="anonymous"></script>
   <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer/">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="css/pie.css">
 
@@ -81,11 +82,13 @@
 
   <div class="container">
     <h2 class="mt-5"></h2>
-    <h2>Between 1901 and 2019, Nobel Prizes have been awarded 
-      <h2><strong>597</strong> times</h2>
-      <h2>across <strong>6</strong> categories  </h2>
-      <h2> to <strong>950</strong> laureates </h2>
-        <h2> from <strong>81</strong> countries</h2>
+    <h2>Q: But if there are 597 prizes, how are there 950 laureates? </h2>
+    <h2>A: The statutes of the Nobel Foundation allow for the division of prizes:</h2>
+    <hr>
+    <h5>A prize amount may be equally divided between two works, each of which is considered to merit a prize.</h5>
+    <h5>For collaborators on a work, the prize shall be awarded to them jointly. </h5>
+    <h5>In no case may a prize amount be divided between more than three persons.</h5>
+    <hr>
     
     <!-- <p class="lead"> </p>
     <h1>The Nobel Prize, has annually bestowed anually since 1901 </h1>
@@ -96,22 +99,46 @@
   
 
     <div class='row'>
-      <div class='col-sm' ></div>
-      <div class='col-md' id='dataviz'>    <div > </div></div>
-      <div class='col-sm'><br><br><br><br><br><br><a href='page2.html'>next</a></div>
+      <div class='col-' >
+        <div id='dataviz_key' ></div>
+        <a href='page1.html'>prev </a>
+      </div>
+     
+      <div class='col-'>    <div id='dataviz'> </div></div>
+      <div class='col-'>    <div id='dataviz2'> </div></div>
+      <div class='col-' >
+        <div id='dataviz_key2' ></div>
+        <a href='page2.html'>next </a>
+      </div>
  
      </div>
 
 
     <div id="tooltip" class="hidden">
       <p><strong><span id="category">Important Label Heading</span></strong></p>
-      <p><span id="value">100</span>%</p>
+      <p><span id="value">100</span> awards</p>
     </div>
+
+    <div id="tooltip2" class="hidden">
+      <p><strong><span id="category">Important Label Heading</span></strong></p>
+      <p><span id="value">100</span> laureates </p> 
+    </div>
+
+
+
+
+
 
 
   <footer class="footer mt-auto py-3 text-center">
     <div class="container">
-      <span class="text-muted">The nobel prize categories include econ, medicine, literature, science, and peace</span>
+      <p class="text-muted">111 <i class="fas fa-flask"></i> awards for 184 laureates •
+      51 <i class="fas fa-dollar-sign"></i> awards for 84 laureates  •
+      112 <i class="fas fa-book"></i> awards for 116 laureates 
+      <p class="text-muted">110 <i class="fas fa-stethoscope"></i></i> awards for 219 laureates •
+      100 <i class="fas fa-peace"></i></i> awards for 134 laureates • 
+      113 <i class="fas fa-atom"></i></i> awards for 213 laureates </p>
+
     </div>
   </footer>
 </body>
@@ -119,6 +146,7 @@
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> -->
-<script src="page1.js"></script>
+<script src="page2.js"></script>
+<script src="https://kit.fontawesome.com/3aa3724286.js" crossorigin="anonymous"></script>
 
 </html>
