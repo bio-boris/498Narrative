@@ -8,26 +8,26 @@ function displayChart() {
   var x = document.getElementById("mySelect").value;
   switch(x) {
     case 'chemistry':
-      update(chemistry_data,'red')
+      update(chemistry_data,'red',x)
 
       break;
     case 'economics':
-      update(economics_data,'blue')
+      update(economics_data,'blue',x)
       break;
     case 'literature':
-      update(literature_data,'green')
+      update(literature_data,'green',x)
       break;
     case 'medicine':
-      update(medicine_data,'purple')
+      update(medicine_data,'purple',x)
       break;
     case 'peace':
-      update(peace_data,'orange')
+      update(peace_data,'orange',x)
       break;
     case 'physics':
-      update(physics_data,'yellow')
+      update(physics_data,'yellow',x)
       break;
     default:
-      update(overall_data,'silver')
+      update(overall_data,'black','all categories')
   } 
 
 
@@ -134,7 +134,7 @@ svg.append("g")
  .call(d3.axisLeft(y));
 
 // A function that create / update the plot for a given variable:
-function update(data, category) {
+function update(data, category, xtext) {
 
 
 
@@ -174,6 +174,14 @@ function update(data, category) {
     .text(function (d) { console.log(d.value); return d.value; })
     .exit(function(d){ console.log('exit')})
   
+  svg.append("text")
+  .attr('class','label')
+    .attr("x", (width / 2))             
+    .attr("y", 0 - (margin.top / 2))
+    .attr("text-anchor", "middle")  
+    .style("font-size", "16px") 
+    .style("text-decoration", "underline")  
+    .text(xtext);
   
 }
 
@@ -181,4 +189,4 @@ function update(data, category) {
 
 
 // Initialize the plot with the first dataset
-update(chemistry_data,'red')
+update(chemistry_data,'red','chemistry')
