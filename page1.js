@@ -92,7 +92,7 @@ var tooltip = d3.select("#dataviz").append("div").attr("class","tooltip");
 console.log(svg);
 var arcs = g.selectAll("path")
 arcs.on("mouseover", function (d) {
-    tooltip = d3.select("#tooltip2");
+    tooltip = d3.select("#tooltip");
         tooltip
         .style("left", d3.event.pageX + "px")
         .style("top", d3.event.pageY + "px")

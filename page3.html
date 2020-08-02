@@ -82,36 +82,44 @@
 
   <div class="container">
     <h2 class="mt-5"></h2>
-    <h2>Q: But if there are 597 prizes, how are there 950 laureates? </h2>
-    <h2>A: The statutes of the Nobel Foundation allow for the division of prizes:</h2>
+    <h2>Q: What are basic demographics of the winners for each category? </h2>
+    <h2>A: </h2>
     <hr>
-    <h5>A prize amount may be equally divided between two works, each of which is considered to merit a prize.</h5>
-    <h5>For collaborators on a work, the prize shall be awarded to them jointly. </h5>
-    <h5>In no case may a prize amount be divided between more than three persons.</h5>
-    <hr>
-    
-    <!-- <p class="lead"> </p>
-    <h1>The Nobel Prize, has annually bestowed anually since 1901 </h1>
-    <strong>6</strong> categories in recognition of academic, cultural, or scientific advances.
-    </h1>
-   -->
- 
-  
+<!-- 
+      Click to display Age
+    Youngest 17
+    Average 78
+    Eldest 97
 
+      Click to display gender breakdown
+    Male:
+    Female: 54 -->
+   
     <div class='row'>
       <div class='col-' >
-        <div id='dataviz_key' ></div>
-        <a href='page1.html'>prev </a>
+        <select id='mySelect' onClick="displayChart()" autocomplete="off"> 
+        <option value='chemistry'>Chemistry</option>
+        <option value='economics'>Economics</option>
+        <option value='literature'>Literature</option>
+        <option value='medicine'>Medicine</option>
+        <option value='peace'>Peace</option>
+        <option value='physics'>Physics</option>
+        <option value='everyone'>All Categories</option>
+      </select>
+      <div id='dataviz_key' ></div>
+      <a href='page2.html'>prev </a>
+       </div>
+       <div class='col-'  id='content'><div id="dataviz"></div></div>
       </div>
-     
-      <div class='col-'>    <div id='dataviz'> </div></div>
-      <div class='col-'>    <div id='dataviz2'> </div></div>
-      <div class='col-' >
-        <div id='dataviz_key2' ></div>
-        <a href='page3.html'>next </a>
-      </div>
- 
+
      </div>
+ 
+
+
+
+
+
+ 
 
 
     <div id="tooltip" class="hidden">
@@ -130,23 +138,19 @@
 
 
 
-  <footer class="footer mt-auto py-3 text-center">
-    <div class="container">
-      <p class="text-muted">111 <i class="fas fa-flask"></i> awards for 184 laureates •
-      51 <i class="fas fa-dollar-sign"></i> awards for 84 laureates  •
-      112 <i class="fas fa-book"></i> awards for 116 laureates 
-      <p class="text-muted">110 <i class="fas fa-stethoscope"></i></i> awards for 219 laureates •
-      100 <i class="fas fa-peace"></i></i> awards for 134 laureates • 
-      113 <i class="fas fa-atom"></i></i> awards for 213 laureates </p>
-
-    </div>
-  </footer>
+ 
+    <footer class="footer  text-center">
+      <div class="container">
+        <p class="text-muted">Economists are late bloomers when it comes to receiving a nobel, with an average age of 67 </p>
+     
+      </div>
+    </footer>
 </body>
 <!-- Color scale -->
 
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> -->
-<script src="page2.js"></script>
+<script src="page3.js"></script>
 <script src="https://kit.fontawesome.com/3aa3724286.js" crossorigin="anonymous"></script>
 
 </html>
